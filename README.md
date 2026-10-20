@@ -4,10 +4,10 @@ REST API для управления проектами и задачами. Р�
 
 ## Технологии
 - Java 21
-- Spring Boot 4.1.1**
+- Spring Boot 4.1.1
 - Spring Data JPA (Hibernate)
 - H2 Database (в памяти)
-- Spring Security (Basic Auth, роли USER/ADMIN)
+- Spring Security** (Basic Auth, роли USER/ADMIN)
 - Swagger / OpenAPI (автодокументация)
 - JUnit 5 + MockMvc (тестирование)
 - Maven (сборка)
