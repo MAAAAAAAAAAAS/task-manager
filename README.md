@@ -3,14 +3,14 @@
 REST API для управления проектами и задачами. Разработан на Spring Boot.
 
 ## Технологии
-- **Java 21**
-- **Spring Boot 4.1.1**
-- **Spring Data JPA** (Hibernate)
-- **H2 Database** (в памяти)
-- **Spring Security** (Basic Auth, роли USER/ADMIN)
-- **Swagger / OpenAPI** (автодокументация)
-- **JUnit 5 + MockMvc** (тестирование)
-- **Maven** (сборка)
+- Java 21
+- Spring Boot 4.1.1**
+- Spring Data JPA (Hibernate)
+- H2 Database (в памяти)
+- Spring Security (Basic Auth, роли USER/ADMIN)
+- Swagger / OpenAPI (автодокументация)
+- JUnit 5 + MockMvc (тестирование)
+- Maven (сборка)
 
 ## Функционал
 - CRUD для проектов (создание, чтение, обновление, удаление).
@@ -22,7 +22,7 @@ REST API для управления проектами и задачами. Р�
 - Аудит (дата создания и обновления автоматически).
 
 ## Как запустить
-1. Убедитесь, что у вас установлена **Java 21**.
+1. Убедитесь, что у вас установлена Java 21.
 2. Склонируйте репозиторий:
    ```bash
    git clone https://github.com/ВАШ_НИК/task-manager.git
