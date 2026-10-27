@@ -44,7 +44,6 @@ REST API для управления проектами и задачами. Р�
    git clone https://github.com/MAAAAAAAAAAAS/task-manager.git
    cd task-manager
    ./mvnw spring-boot:run
-5.
 5. Swagger UI: http://localhost:8080/swagger-ui/index.html
 
 ## Безопасность
