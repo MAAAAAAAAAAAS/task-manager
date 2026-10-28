@@ -27,15 +27,12 @@ public class ProjectControllerTest {
     @Autowired
     private TaskRepository taskRepository;
 
-    private String name;
-    private String description;
-
     private Long wrongId, projectId;
 
     @BeforeEach
     void setUp() {
-        projectRepository.deleteAll();
         taskRepository.deleteAll();
+        projectRepository.deleteAll();
 
         Project project = projectRepository.save(new Project("Постройка дома", "строим дом"));
 
@@ -111,9 +108,9 @@ public class ProjectControllerTest {
 
     @Test
     void deleteProject_shouldDeleteProject() throws Exception {
-        mockMvc.perform(delete("/api/tasks/{id}", projectId).with(user("admin").roles("ADMIN")))
+        mockMvc.perform(delete("/api/projects/{id}", projectId).with(user("admin").roles("ADMIN")))
                 .andExpect(status().isOk());
-        mockMvc.perform(get("/api/tasks/{id}", projectId).with(user("user").roles("USER")))
+        mockMvc.perform(get("/api/projects/{id}", projectId).with(user("user").roles("USER")))
                 .andExpect(status().isNotFound());
     }
 
