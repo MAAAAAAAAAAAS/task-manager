@@ -81,3 +81,7 @@ REST API для управления проектами и задачами. Р�
 
 Проект покрыт интеграционными тестами (JUnit 5 + MockMvc).
 ./mvnw test
+
+## Live Demo
+**[Открыть Swagger UI](https://task-manager-db-9831.onrender.com/swagger-ui/index.html)**
+*(Логин: `admin` / `admin123`)*
