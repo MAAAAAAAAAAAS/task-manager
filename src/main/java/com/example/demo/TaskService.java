@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -27,18 +28,21 @@ public class TaskService {
                 task.getDeadline());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getAllTasks() {
         return taskRepository.findAll().stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public TaskDto getTaskById(Long id) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Задача не найдена"));
         return toDto(task);
     }
 
+    @Transactional
     public TaskDto createTask(Task task) {
         if (task.getProject() != null && task.getProject().getId() != null) {
             Project project = projectRepository.findById(task.getProject().getId())
@@ -49,6 +53,7 @@ public class TaskService {
         return toDto(saved);
     }
 
+    @Transactional
     public TaskDto updateTask(Long id, Task newTask) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Задача не найдена"));
@@ -69,50 +74,59 @@ public class TaskService {
         return toDto(saved);
     }
 
+    @Transactional
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByPriority(int priority) {
         return taskRepository.findByPriority(priority).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByCompleted(boolean completed) {
         return taskRepository.findByCompleted(completed).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByProject(Long projectId) {
         return taskRepository.findByProjectId(projectId).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByDeadlineBefore(LocalDate deadline) {
         return taskRepository.findByDeadlineBefore(deadline).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByPriorityGreaterThan(int priority) {
         return taskRepository.findByPriorityGreaterThan(priority).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TaskDto> getTasksByTitleContains(String part) {
         return taskRepository.findTaskByTitleContains(part).stream()
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public Long getTasksCount() {
         return taskRepository.count();
     }
 
+    @Transactional
     public void deleteAllTasks() {
         taskRepository.deleteAll();
     }

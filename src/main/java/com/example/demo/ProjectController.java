@@ -53,4 +53,9 @@ public class ProjectController {
     public List<ProjectDto> getProjectsByNameContains(@PathVariable String part) {
         return projectService.getProjectByNameContains(part);
     }
+
+    @GetMapping("/test/rollback")
+    public void testRollback() {
+        projectService.testTransactionalRollback();
+    }
 }
