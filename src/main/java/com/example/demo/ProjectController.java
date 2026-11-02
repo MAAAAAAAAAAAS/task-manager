@@ -54,8 +54,8 @@ public class ProjectController {
         return projectService.getProjectByNameContains(part);
     }
 
-    @GetMapping("/test/rollback")
-    public void testRollback() {
-        projectService.testTransactionalRollback();
+    @GetMapping("/test-n-plus-1")
+    public void testNPlusOne() {
+        projectService.testNPlusOne();
     }
 }
