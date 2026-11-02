@@ -73,11 +73,11 @@ public class ProjectService {
     public void testNPlusOne() {
         System.out.println("=== НАЧАЛО ТЕСТА N+1 ===");
 
-        List<Project> projects = projectRepository.findAll();
+        List<Project> projects = projectRepository.findAllWithTasks();
 
         for (Project project : projects) {
             System.out.println("Проект: " + project.getName());
-            
+
             System.out.println("Количество задач: " + project.getTasks().size());
         }
         System.out.println("=== КОНЕЦ ТЕСТА N+1 ===");
