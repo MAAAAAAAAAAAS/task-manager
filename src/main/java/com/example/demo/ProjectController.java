@@ -53,9 +53,4 @@ public class ProjectController {
     public List<ProjectDto> getProjectsByNameContains(@PathVariable String part) {
         return projectService.getProjectByNameContains(part);
     }
-
-    @GetMapping("/test-n-plus-1")
-    public void testNPlusOne() {
-        projectService.testNPlusOne();
-    }
 }
