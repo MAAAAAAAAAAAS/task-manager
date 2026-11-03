@@ -1,8 +1,9 @@
-package task;
+package com.example.demo.task;
 
-import project.Project;
+import com.example.demo.project.Project;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.example.demo.project.ProjectRepository;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,6 +1,6 @@
-package task;
+package com.example.demo.task;
 
-import project.Project;
+import com.example.demo.project.Project;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

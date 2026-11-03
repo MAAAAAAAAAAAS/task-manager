@@ -1,6 +1,6 @@
-package auth;
+package com.example.demo.auth;
 
-import security.JwtService;
+import com.example.demo.security.JwtService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package task;
+package com.example.demo.task;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

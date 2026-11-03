@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import project.Project;
-import project.ProjectRepository;
+import com.example.demo.project.Project;
+import com.example.demo.project.ProjectRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.http.MediaType;
-import task.Task;
-import task.TaskRepository;
+import com.example.demo.task.Task;
+import com.example.demo.task.TaskRepository;
 
 import java.time.LocalDate;
 

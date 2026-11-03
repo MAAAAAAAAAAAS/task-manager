@@ -1,4 +1,4 @@
-package project;
+package com.example.demo.project;
 
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;

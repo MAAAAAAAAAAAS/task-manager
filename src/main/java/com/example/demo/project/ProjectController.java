@@ -1,4 +1,4 @@
-package project;
+package com.example.demo.project;
 
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
