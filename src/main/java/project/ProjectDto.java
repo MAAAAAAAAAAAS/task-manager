@@ -1,4 +1,4 @@
-package com.example.demo;
+package project;
 
 public class ProjectDto {
     private Long id;

@@ -1,5 +1,6 @@
-package com.example.demo;
+package project;
 
+import task.Task;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.CreatedDate;
